@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HM_Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HM_Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer" nillable="true" type="tns:Customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomer" nillable="true" type="tns:ArrayOfCustomer" />
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rif" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="ArrayOfItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Item" nillable="true" type="tns:Item" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItem" nillable="true" type="tns:ArrayOfItem" />
+  <xs:complexType name="Item">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Item" nillable="true" type="tns:Item" />
+  <xs:complexType name="Sales">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rif" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Saldo" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SaleId" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sales" nillable="true" type="tns:Sales" />
+  <xs:complexType name="ArrayOfSalesDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesDetail" nillable="true" type="tns:SalesDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalesDetail" nillable="true" type="tns:ArrayOfSalesDetail" />
+  <xs:complexType name="SalesDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="SaleDetailId" type="xs:int" />
+      <xs:element minOccurs="0" name="SaleId" type="xs:int" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalesDetail" nillable="true" type="tns:SalesDetail" />
+  <xs:complexType name="ArrayOfSales">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Sales" nillable="true" type="tns:Sales" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSales" nillable="true" type="tns:ArrayOfSales" />
+  <xs:complexType name="ArrayOfNumeros">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Numeros" nillable="true" type="tns:Numeros" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNumeros" nillable="true" type="tns:ArrayOfNumeros" />
+  <xs:complexType name="Numeros">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Num" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Numeros" nillable="true" type="tns:Numeros" />
+</xs:schema>
