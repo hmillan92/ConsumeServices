@@ -180,7 +180,8 @@ namespace HM_WindowsForms
             Customers ClienteForm = new Customers();
             ClienteForm.BtnSearch_Click(txtRif.Text, e);
             ClienteForm.MdiParent = menuForm;
-            ClienteForm.Show();             
+            ClienteForm.Show();
+            return;
         }
     }
 }
