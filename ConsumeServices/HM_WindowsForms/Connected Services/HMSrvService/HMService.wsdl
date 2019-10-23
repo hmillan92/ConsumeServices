@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HMService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.250.52:8081/HMService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.250.52:8081/HMService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.250.52:8081/HMService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HM_Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHMService_ValidaConexionSQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaConexionSQL" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_ValidaConexionSQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaConexionSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_CreateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_CreateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_ListarCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_ListarCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_DeleteCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_DeleteCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_ValidarCustomerByRif_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarCustomerByRif" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_ValidarCustomerByRif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarCustomerByRifResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_CreateItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateItem" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_CreateItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_ListarItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarItem" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_ListarItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_DeleteItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItem" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_DeleteItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_ValidarItemByCod_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarItemByCod" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_ValidarItemByCod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarItemByCodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_CreateSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSale" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_CreateSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_ListarSales_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarSales" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_ListarSales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarSalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_SumarLista_InputMessage">
+    <wsdl:part name="parameters" element="tns:SumarLista" />
+  </wsdl:message>
+  <wsdl:message name="IHMService_SumarLista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SumarListaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IHMService">
+    <wsdl:operation name="ValidaConexionSQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/ValidaConexionSQL" message="tns:IHMService_ValidaConexionSQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/ValidaConexionSQLResponse" message="tns:IHMService_ValidaConexionSQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/CreateCustomer" message="tns:IHMService_CreateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/CreateCustomerResponse" message="tns:IHMService_CreateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/ListarCustomer" message="tns:IHMService_ListarCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/ListarCustomerResponse" message="tns:IHMService_ListarCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/DeleteCustomer" message="tns:IHMService_DeleteCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/DeleteCustomerResponse" message="tns:IHMService_DeleteCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarCustomerByRif">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/ValidarCustomerByRif" message="tns:IHMService_ValidarCustomerByRif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/ValidarCustomerByRifResponse" message="tns:IHMService_ValidarCustomerByRif_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/CreateItem" message="tns:IHMService_CreateItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/CreateItemResponse" message="tns:IHMService_CreateItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/ListarItem" message="tns:IHMService_ListarItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/ListarItemResponse" message="tns:IHMService_ListarItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/DeleteItem" message="tns:IHMService_DeleteItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/DeleteItemResponse" message="tns:IHMService_DeleteItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarItemByCod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/ValidarItemByCod" message="tns:IHMService_ValidarItemByCod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/ValidarItemByCodResponse" message="tns:IHMService_ValidarItemByCod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSale">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/CreateSale" message="tns:IHMService_CreateSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/CreateSaleResponse" message="tns:IHMService_CreateSale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarSales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/ListarSales" message="tns:IHMService_ListarSales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/ListarSalesResponse" message="tns:IHMService_ListarSales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SumarLista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHMService/SumarLista" message="tns:IHMService_SumarLista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHMService/SumarListaResponse" message="tns:IHMService_SumarLista_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IHMService" type="tns:IHMService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidaConexionSQL">
+      <soap:operation soapAction="http://tempuri.org/IHMService/ValidaConexionSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <soap:operation soapAction="http://tempuri.org/IHMService/CreateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCustomer">
+      <soap:operation soapAction="http://tempuri.org/IHMService/ListarCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap:operation soapAction="http://tempuri.org/IHMService/DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarCustomerByRif">
+      <soap:operation soapAction="http://tempuri.org/IHMService/ValidarCustomerByRif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateItem">
+      <soap:operation soapAction="http://tempuri.org/IHMService/CreateItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarItem">
+      <soap:operation soapAction="http://tempuri.org/IHMService/ListarItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItem">
+      <soap:operation soapAction="http://tempuri.org/IHMService/DeleteItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarItemByCod">
+      <soap:operation soapAction="http://tempuri.org/IHMService/ValidarItemByCod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSale">
+      <soap:operation soapAction="http://tempuri.org/IHMService/CreateSale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarSales">
+      <soap:operation soapAction="http://tempuri.org/IHMService/ListarSales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SumarLista">
+      <soap:operation soapAction="http://tempuri.org/IHMService/SumarLista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HMService">
+    <wsdl:port name="BasicHttpBinding_IHMService" binding="tns:BasicHttpBinding_IHMService">
+      <soap:address location="http://192.168.250.52:8081/HMService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

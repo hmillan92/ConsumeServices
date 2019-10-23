@@ -13,7 +13,7 @@ namespace HM_WindowsForms
 {
     public partial class Items : Form
     {
-        HM_WCFService.HMServiceClient MiServicio = new HM_WCFService.HMServiceClient();
+        HMSrvService.HMServiceClient MiServicio = new HMSrvService.HMServiceClient();
         public Items()
         {
             InitializeComponent();

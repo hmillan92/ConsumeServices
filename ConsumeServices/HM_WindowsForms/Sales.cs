@@ -13,7 +13,7 @@ namespace HM_WindowsForms
 {
     public partial class Sales : Form
     {
-        HM_WCFService.HMServiceClient MiServicio = new HM_WCFService.HMServiceClient();
+        HMSrvService.HMServiceClient MiServicio = new HMSrvService.HMServiceClient();
         List<SalesDetail> ListaArticulos = new List<SalesDetail>();
         
         public Sales()
@@ -174,14 +174,12 @@ namespace HM_WindowsForms
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Customer Cliente = new Customer();
             Menu menuForm = new Menu();
             string rif = txtRif.Text;
             Customers ClienteForm = new Customers();
-            ClienteForm.BtnSearch_Click(txtRif.Text, e);
-            ClienteForm.MdiParent = menuForm;
+            ClienteForm.BtnSearch_Click(txtRif.Text, e);           
             ClienteForm.Show();
-            return;
+            
         }
     }
 }
